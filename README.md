@@ -6,9 +6,11 @@ Notes:
 
 *** Instructions and Expected Output (prefixed by -> for clarity): ***
 1. Compile the files
-2. create the jar
+2. create the jar:
   jar cvfe pa1.jar Main *.class
 3. Run:
+
+
 ---Start the Server:-----------------------------------------------------------------------------------
 
 java -jar pa1.jar server start 9999
