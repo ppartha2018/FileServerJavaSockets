@@ -17,6 +17,7 @@ java -jar pa1.jar server start 9999
 -> Server running on port: 9999
 
 ---Start the Client:  -----------------------------------------------------------------------------------
+
 (In a different command window or put server to background by appending &)
 <set environment variable PA1_SERVER>
 example: set PA1_SERVER=localhost:9999 (on windows) 
@@ -32,6 +33,7 @@ java -jar pa1.jar client upload ./files/upload.txt ./server/upload.txt
 -> File Upload successful!
 
 ---Resume Partial Upload: (due to any issues related to network, client or server crash:----------------
+
 java -jar pa1.jar client upload ./files/upload.txt ./server/upload.txt
 -> Resuming upload...
 -> 80% (changes in real time)
@@ -51,10 +53,12 @@ java -jar pa1.jar client download ./server/upload.txt
 -> File Download successful!
 
 ---Download: (File not present in server:--------------------------------------------------------------
+
 java -jar pa1.jar client download ./server/upload-not-present.txt
 -> The requested file does not exist in server.
 
 ---Resume Partial Download: (due to any issues related to network, client or server crash:--------------
+
 java -jar pa1.jar client download ./server/upload.txt
 -> Resuming download...
 -> 80% (changes in real time)
@@ -66,6 +70,7 @@ dir
 -> upload.txt	pa1.jar
 
 ---MKDIR:----------------------------------------------------------------------------------------------
+
 java -jar pa1.jar client mkdir hello
 -> Directory hello created in server.
 
@@ -73,6 +78,7 @@ java -jar pa1.jar client mkdir hello
 ERR501: Given directory already exist in server.
 
 ---LISTDIR:--------------------------------------------------------------------------------------------
+
 java -jar pa1.jar client dir .
 -> hello	server		pa1.jar		upload.txt
 
